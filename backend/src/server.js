@@ -38,6 +38,12 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(PORT, () => {
-    console.log(`🚀 AI Agronomist Server running on http://localhost:${PORT}`);
-});
+// Only start listener in local/non-serverless environments
+if (process.env.NODE_ENV !== 'production' || process.env.VERCEL !== '1') {
+    app.listen(PORT, () => {
+        console.log(`🚀 AI Agronomist Server running on http://localhost:${PORT}`);
+    });
+}
+
+// Export for Vercel Serverless Functions
+export default app;
