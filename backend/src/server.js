@@ -38,8 +38,8 @@ app.use((err, req, res, next) => {
     });
 });
 
-// Only start listener in local/non-serverless environments
-if (process.env.NODE_ENV !== 'production' || process.env.VERCEL !== '1') {
+// Only skip HTTP listener on Vercel serverless (Render always needs it)
+if (!process.env.VERCEL) {
     app.listen(PORT, () => {
         console.log(`🚀 AI Agronomist Server running on http://localhost:${PORT}`);
     });

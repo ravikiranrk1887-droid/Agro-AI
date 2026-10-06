@@ -1,4 +1,6 @@
-const API_BASE_URL = '/api';
+// In production (Vercel), VITE_API_URL points to the Render backend.
+// In local dev, falls back to /api which is proxied by Vite to localhost:5000
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 export async function submitDiagnosis(formData, userId) {
     const res = await fetch(`${API_BASE_URL}/diagnose`, {
