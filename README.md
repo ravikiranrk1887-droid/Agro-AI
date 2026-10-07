@@ -2,7 +2,12 @@
 
 Production-grade, end-to-end, highly scalable web application providing real-time agricultural guidance, multimodal plant pathology diagnosis, soil chemistry & N-P-K recommendation calculation, localized weather risk modeling, and multi-turn AI agronomic consultation using the `@google/genai` SDK and Supabase PostgreSQL with Row Level Security (RLS).
 
+## 🌐 Live Demo
+
+> **Frontend (Vercel):** [https://agro-a8ax88y2b-ravikiranrk1887-9832s-projects.vercel.app](https://agro-a8ax88y2b-ravikiranrk1887-9832s-projects.vercel.app)
+
 ---
+
 
 ## 🌟 Key Features
 
